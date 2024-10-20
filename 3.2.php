@@ -8,7 +8,7 @@ $text = <<<EOD
 </ul>
 EOD;
 
-$pattern = "/<li>(.*?)<\/li>/";
+$pattern = "/<li>(\w+)<\/li>/";
 $replacement = "<li><a href='http://www.php.kh.ua/script.php?role=$1'>$1</a></li>";
 
 $result = preg_replace($pattern, $replacement, $text);
